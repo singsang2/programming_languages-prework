@@ -2,7 +2,7 @@ def reformat_languages(languages)
   # your code here
   reformat = {}
   get_names(languages).each do |language|
-    reformat[language] = {:type => get_type(languages, language)[0], :style => get_style(languages, language)}
+    reformat[language] = {:type => get_type(languages, language), :style => get_style(languages, language)}
   end
   reformat
 end
