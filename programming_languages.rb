@@ -12,9 +12,9 @@ def get_names(languages)
 end
 
 def get_type(languages, language)
-  type = []
-  languages.each {|style, data| type.push(data.fetch(language, nil).fetch(:type)) if data.fetch(language, nil) != nil}
-  type.uniq
+  type = nil
+  languages.each {|style, data| type = data.fetch(language, nil).fetch(:type) if data.fetch(language, nil) != nil}
+  type
 end
 
 def get_style(languages, language)
